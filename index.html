@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="j.css">
+<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="j.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript">
+        $(window).on('scroll',function(){
+            if($(window).scrollTop()){
+                $('nav').addClass('black');
+            }
+            else{
+                $('nav').removeClass('black');
+            }
+        })
+  /*menu button onclick function*/         $(document).ready(function(){
+                $('.menu h4').click(function(){
+                    $("nav ul").toggleClass("active")
+            })
+            })
+        </script>
+        <title> The Belle Bakery</title>
+    </head>
+    
+<body>
+        <div class="responsive-bar">
+        <div class="logo">
+          
+            </div>
+            <div class="menu">
+            <h4>Menu</h4>
+            </div>
+        </div>
+		<nav>
+            <div class="logo">
+       
+            </div>
+         <ul><li><a href="#">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="C:\Users\anike\Desktop\Internship\about.html">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">Contact Us</a></li> <li>
+            <form action="" class="search-bar">
+                <input type="search" name="search" pattern=".*\S.*" required>
+                <button class="search-btn" type="submit">
+                    <span>Search</span>
+                </button>
+            </form>
+         </li>
+            
+            </ul></nav>
+            
+        
+  <div class="p1">
+    <img src="C:\Users\anike\Desktop\Internship\banner1.jpg" alt="Placeholder-Image">
+   
+    
+    
+  </div><br>
+
+   
+   
+
+
+
+<div class="box">
+    
+    <p>Hi folks! <br> Welcome to The Belle Bakery !<br>
+       
+              Visit us for lots of 
+        <span 
+           class="txt-rotate"
+           data-period="2000"
+           data-rotate='[ " Food!  :)", " Cuisines!  :)", " Dishes!  :)", " Entertainment!  :)", " happy moments!  :)" ]'></span>
+         </p>
+  </div>
+  
+<div class="gallery">
+    <div class="imgbox"active>
+        <img src="3.3.jpg">
+    </div>
+    <div class="imgbox">
+        <img src="2.2.jpg">
+    </div>
+    <div class="imgbox">
+        <img src="1.1.jpg">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+</script>
+
+
+
+
+<div class="para">
+    <p>
+      <b> THE BELLE BAKERY</b> 
+      We are determined to provide the best of services to our customers,this store will be one of a kind,providing best ambience and taste,and is designed keeping in mind the requirements of New age Customers who want value for money products!! <br>
+      
+      Designed and implemented by Young engineers,this is a place which will make you say “Wow” for sure!! <br>
+      
+      We request you to please grace us with your presence.
+       <br>
+    </p>
+</div>
+
+<br>
+
+
+
+<div class="containers">
+  <div class="row">
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);"></div>
+          <h2>Starters </h2>
+          <div class="slide">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="photo-container" style="background-image: url(https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);"></div>
+          <h2>Saucage </h2>
+          <div class="slide">
+              <p>Doloremque quisquam molestias, est laudantium vero aliquid dolorum inventore atque sint perferendis qui dolor voluptas consequuntur non.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://images.unsplash.com/photo-1587668178277-295251f900ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80);"></div>
+          <h2>Vanilla Cupcake </h2>
+          <div class="slide">
+              <p>Facere illo pariatur necessitatibus fugit quo impedit, quae, corporis placeat recusandae dolor ipsa nobis!</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);"></div>
+          <h2>Pineapple Cupcake </h2>
+          <div class="slide">
+              <p>Quam molestiae ipsa sapiente mollitia, nobis.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://media.istockphoto.com/photos/chocolate-cake-with-chocolate-fudge-drizzled-icing-and-chocolate-picture-id478348860?b=1&k=20&m=478348860&s=170667a&w=0&h=ClleMEXaQNUh01_-3-Q87ZhkjLZ1E6CKmcRJ2oxtRn8=);"></div>
+          <h2>Choclate Cake </h2>
+          <div class="slide">
+              <p>Autem possimus perspiciatis, eaque quos repudiandae modi labore sed repellat dolorum magnam praesentium expedita esse tempore saepe nulla.</p>
+          </div>
+      </div>
+      
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://media.istockphoto.com/photos/wedding-cake-with-champagne-flutes-on-table-picture-id181153084?b=1&k=20&m=181153084&s=170667a&w=0&h=jTF3jaw9K8ZkDEPC_inSdl6OeBzftAiPxTPrXKd7LRk=);"></div>
+          <h2>Wedding Cake </h2>
+          <div class="slide">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://images.unsplash.com/photo-1574126154517-d1e0d89ef734?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80);"></div>
+          <h2>Italian Pizza </h2>
+          <div class="slide">
+              <p>Veritatis eos similique eveniet tempora.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://media.istockphoto.com/photos/indian-veg-chapati-wrap-kathi-roll-served-in-a-plate-with-sauce-over-picture-id1024561200?b=1&k=20&m=1024561200&s=170667a&w=0&h=cGnl1ZkEyENlOS-chPdOlfIurmAUbjP6_ULFSueU2SY=);"></div>
+          <h2>Frankies</h2>
+          <div class="slide">
+              <p>Doloremque quisquam molestias, est laudantium vero aliquid dolorum inventore atque sint perferendis qui dolor voluptas consequuntur non.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://media.istockphoto.com/photos/vegetarian-spring-rolls-picture-id1273814789?b=1&k=20&m=1273814789&s=170667a&w=0&h=a9OqUpRZGeDUQIda2trK_HbiWCEXwad4rt2ASzVz-Vg=);"></div>
+          <h2>Spring Rolls </h2>
+          <div class="slide">
+              <p>Facere illo pariatur necessitatibus fugit quo impedit, quae, corporis placeat recusandae dolor ipsa nobis!</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://media.istockphoto.com/photos/japanese-dumplings-gyoza-with-pork-meat-and-vegetables-picture-id1133151212?b=1&k=20&m=1133151212&s=170667a&w=0&h=-XPU-BOpOepaVLcVsMuXyZNSml80XlY_KDFKsSWW8ug=);"></div>
+          <h2>Momos </h2>
+          <div class="slide">
+              <p>Quam molestiae ipsa sapiente mollitia, nobis.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://media.istockphoto.com/photos/woman-with-fork-picking-up-indo-chinese-manchurian-hakka-street-food-picture-id1319841389?b=1&k=20&m=1319841389&s=170667a&w=0&h=ZQJtDygZ2OZFlq3ttlTR3xi12FYiUQ2n1eT7m1Ljph0=);"></div>
+          <h2>Manchurian</h2>
+          <div class="slide">
+              <p>Autem possimus perspiciatis, eaque quos repudiandae modi labore sed repellat dolorum magnam praesentium expedita esse tempore saepe nulla.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://media.istockphoto.com/photos/fried-rice-chinese-picture-id1251265248?b=1&k=20&m=1251265248&s=170667a&w=0&h=hfcPRQAcWUTkW-HDqpu35VGrBg_2Q3G9PsplgaeECGM=);"></div>
+          <h2>Fried Rice</h2>
+          <div class="slide">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://media.istockphoto.com/photos/diverse-keto-dishes-picture-id1280158821?b=1&k=20&m=1280158821&s=170667a&w=0&h=ibwKxBzWcygq6NMKO5FTD-3ljLvwM8E1WVevw7XSmlk=);"></div>
+          <h2>French Fries </h2>
+          <div class="slide">
+              <p>Facere illo pariatur necessitatibus fugit quo impedit, quae, corporis placeat recusandae dolor ipsa nobis!</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://media.istockphoto.com/photos/chinese-homemade-noodles-with-marinated-soup-picture-id1266377452?b=1&k=20&m=1266377452&s=170667a&w=0&h=1Vw1kF2QH-tt7Ez8XTyeiZw7Xc6MDidmFTRb-lz4SS8=);"></div>
+          <h2>Haka Noodles</h2>
+          <div class="slide">
+              <p>Quam molestiae ipsa sapiente mollitia, nobis.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://images.unsplash.com/photo-1597393353365-9d4366392fe9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);"></div>
+          <h2>Italian Pasta </h2>
+          <div class="slide">
+              <p>Autem possimus perspiciatis, eaque quos repudiandae modi labore sed repellat dolorum magnam praesentium expedita esse tempore saepe nulla.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://media.istockphoto.com/photos/ice-cream-scoops-in-cones-with-copy-space-on-blue-picture-id1222009180?b=1&k=20&m=1222009180&s=170667a&w=0&h=Wiks_1uzl89NxXuyGWLWTOA_MWDcneKKvg8kcpEf_OU=);"></div>
+          <h2> Multiflavoured Ice-Cream </h2>
+          <div class="slide">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="card">
+      <img src="C:\Users\anike\Desktop\Internship\razzique1.jpg" alt="Person" class="card__image">
+      <p class="card__name">Razzique</p>
+      <div class="grid-container">
+  
+        <div class="grid-child-posts">
+          156 Post
+        </div>
+  
+        <div class="grid-child-followers">
+          1012 Likes
+        </div>
+  
+      </div>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+      </ul>
+      <button class="btn draw-border">Follow</button>
+      <button class="btn draw-border">Message</button>
+  
+    </div>
+    <div class="card">
+      <img src="kartikay.jpg" alt="Person" class="card__image">
+      <p class="card__name">Kartikay Singh</p>
+      <div class="grid-container">
+  
+        <div class="grid-child-posts">
+          305 Post
+        </div>
+  
+        <div class="grid-child-followers">
+          2643 Likes
+        </div>
+  
+      </div>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+      </ul>
+      <button class="btn draw-border">Follow</button>
+      <button class="btn draw-border">Message</button>
+    </div>
+    <div class="card">
+      <img src="C:\Users\anike\Desktop\Internship\aditya.png" alt= "Person" class="card__image">
+      <p class="card__name">Aditya Dubey</p>
+      <div class="grid-container">
+  
+        <div class="grid-child-posts">
+          902 Post
+        </div>
+  
+        <div class="grid-child-followers">
+          1300 Likes
+        </div>
+  
+      </div>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+      </ul>
+      <button class="btn draw-border">Follow</button>
+      <button class="btn draw-border">Message</button>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <footer>
+    &copy; Aniket Gupta <br> 
+    &copy; Jalaj Tiwari <br>
+    &copy; Shristi Singh <br> 
+  </footer>
+  
+
+
+
+
+
+
+
+	</body>
+    </html>
